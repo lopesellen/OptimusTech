@@ -75,7 +75,7 @@ nav {
 
 
 button.entrar-button {
-    padding: 0.8rem 1.5rem;
+    padding: 0.8rem 1.8rem 0.8rem 1.8rem;
     cursor: pointer;
     border: none;
     border-radius: 0.5rem;
@@ -104,11 +104,7 @@ button:hover.cad-button {
     background-color: #a52727;
 }
 
-.menu.active {
-    right: 0;
-    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s;
-}
+
 
 .sobre-nos {
     padding: 6rem 1rem;
@@ -175,6 +171,7 @@ button:hover.cad-button {
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    
 }
 
 .vagas span {
@@ -200,63 +197,42 @@ button:hover.cad-button {
 
 
 .vagas-abertas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0rem 1rem;
-}
-
-.area {
-    font-weight: 500;
-    font-size: 18px;
+    padding-top: 10px;
+  }
+  
+  .vagas-abertas span.area-principal {
+    display: block;
+    max-width: 50%;
+    margin: 0 auto;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
     font-weight: bold;
     color: var(--title-color);
-    margin-bottom: 10px;
-    margin-top: 0px;
-    justify-content: flex-start;
-}
-
-
-
-.informacoes {
-    border: 1px solid #d8dbe2;
-    box-sizing: border-box;
-    border-radius: 14px;
-    display: flex;
-    flex-direction: column;
-    align-items:flex-start;
-    padding: 5px 5px 0px 5px;
-    width: 600px;
-    height: 100px;
-    position: relative;
+  }
+  
+  .vaga {
+    border: 1px solid #EAECF0;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    max-width: 50%;
+    margin: 0 auto;
     margin-bottom: 1rem;
-}
-
-
-.titulo-vaga {
+    color: var(--title-color);
+  }
+  
+  .vaga span.titulo-vaga {
     font-weight: bold;
-    padding: 10px 0px 0px 15px;
-}
-
-.infos {
+    margin-bottom: 16px;
+  }
+  
+  .vaga .informacoes {
+    margin-top: 1rem;
+    font-size: 90%;
     color: var(--text-color);
     display: flex;
-    flex-direction: row;
-    gap: 8px;
-    padding: 15px 0px 0px 15px;
-    font-size: 15px;
-}
-
-.vagas-abertas2 {
-    margin-top: 2rem;
-}
-
-.vagas-abertas2 .area {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
+    gap: 2rem;
+  }
+  
 .secao-dep {
     border-radius: 5px;
     background-color: rgb(247, 238, 238);
@@ -348,12 +324,48 @@ button:hover.email-cad .cad-button {
 }
 
 
+/*responsividade*/
 
 @media screen and (max-width: 920px) {
     .metricas {
       padding: 0 4rem;
     }
   }
+
+  @media screen and (max-width: 850px) {
+    .metricas {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .metrica {
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+    }
+  
+    .metrica span {
+      max-width: 280px;
+      text-align: center;
+    }
+  
+    .sobre-nos p {
+      max-width: 70%;
+    }
+    .vaga {
+        max-width: 70%;
+      }
+      
+      .vagas-abertas span.area-principal {
+        max-width: 70%;
+      }
+
+    .secao-dep h2 {
+      max-width: 100%;
+      font-size: 110%;
+    }
+}
 
 @media screen and (max-width: 850px) {
     .sideimg {
@@ -374,6 +386,10 @@ button:hover.email-cad .cad-button {
         margin-right: 16px;
     }
 
+    .cabecalho-botoes .entrar-button {
+        margin-bottom: 8px;
+    }
+
     .menu {
         flex-direction: column;
         position: fixed;
@@ -387,10 +403,18 @@ button:hover.email-cad .cad-button {
         transition: all 2s;
     }
 
+    .menu.active {
+        right: 0;
+        box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+        transition: all 0.5s;
+    }
+
 
       .menu.cabecalho-lista, .menu .cabecalho-botoes {
         display: flex;
         flex-direction: column;
+        align-items: center;
         width: 100%;
   }
+
 }
